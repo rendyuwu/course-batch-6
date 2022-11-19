@@ -21,6 +21,10 @@ Saya sudah coba beberapa cara seperti membuat grouping atau noroute di gin tetap
 
 Terimakasih :)
 
+## How to run & build
+- go run app/main.go
+- go build app/main.go
+
 ## Package
 - Database
     - [gorm](https://gorm.io/)
