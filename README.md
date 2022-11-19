@@ -19,6 +19,8 @@ Saya sudah coba beberapa cara seperti membuat grouping atau noroute di gin tetap
 
 ![reoute](route.png)
 
+Terimakasih :)
+
 ## Package
 - Database
     - [gorm](https://gorm.io/)
