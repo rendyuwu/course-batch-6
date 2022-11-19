@@ -13,6 +13,7 @@
 *.dylib
 .env
 tmp
+.air.toml
 
 # Test binary, built with `go test -c`
 *.test
@@ -40,6 +41,8 @@ go.work
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+.idea/vcs.xml
+.idea/git_toolbox_prj.xml
 
 # AWS User-specific
 .idea/**/aws.xml
