@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM golang:1.16-alpine
+FROM golang:1.19.3-alpine
 
 WORKDIR /app
 
@@ -14,4 +14,4 @@ RUN go build app/main.go
 
 EXPOSE 1234
 
-CMD [ "/main" ]
+CMD [ "/app/main" ]

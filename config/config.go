@@ -13,6 +13,9 @@ type Config interface {
 type configImpl struct{}
 
 func NewConfig(filenames ...string) *configImpl {
+	if os.Getenv("ENV") == "production" {
+		return nil
+	}
 	err := godotenv.Load(filenames...)
 	if err != nil {
 		log.Fatal(err)
