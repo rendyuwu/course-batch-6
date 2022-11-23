@@ -8,8 +8,10 @@ import (
 	_authorHandler "exercise/user/delivery/http"
 	_authorRepo "exercise/user/repository/mysql"
 	_authorUsecase "exercise/user/usecase"
+	"fmt"
 	"github.com/gin-gonic/gin"
 	"log"
+	"os"
 )
 
 func main() {
@@ -24,5 +26,11 @@ func main() {
 	_authorHandler.NewUserHandler(r, uu)
 	_exerciseHandler.NewExerciseHandler(r, eu)
 
-	log.Fatal(r.Run(":1234"))
+	var port string
+	if os.Getenv("PORT") != "" {
+		port = os.Getenv("PORT")
+	} else {
+		port = "1234"
+	}
+	log.Fatal(r.Run(fmt.Sprintf(":%s", port)))
 }
